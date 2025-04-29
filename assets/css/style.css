@@ -1,0 +1,571 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------- */
+/* Corps global */
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Police moderne et élégante */
+    line-height: 1.6;
+    background-color: #f9fafc; /* Fond très clair */
+    color: #222; /* Texte légèrement foncé */
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition fluide */
+}
+
+/* Liens */
+a {
+    color: #3498db; /* Bleu clair */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    color: #1abc9c; /* Vert clair au survol */
+    transform: scale(1.1); /* Zoom léger au survol */
+}
+
+/* ---------------------------------------- */
+/* En-tête global */
+header {
+    background-color: #ffffff; /* Fond blanc pur */
+    color: #34495e; /* Texte gris-bleu */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header:hover {
+    background-color: #f1f1f1; /* Fond gris clair au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #3498db; /* Bleu clair */
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+header nav ul li a:hover {
+    color: #e74c3c; /* Rouge doux au survol */
+}
+/* Conteneur des boutons */
+.boutons-header {
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 15px;
+}
+
+.boutons-header {
+    display: inline-block;
+    white-space: nowrap;
+    margin-top: 12px;
+}
+
+/* Style des boutons */
+.btn-small {
+    padding: 4px 8px;       /* Réduction supplémentaire */
+    font-size: 12px;        /* Taille de police réduite */
+    border-radius: 3px;     /* Coins légèrement moins arrondis */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;          /* Marge latérale réduite */
+    min-width: 85px;        /* Largeur minimale ajustée */
+    text-align: center;
+    transition: all 0.15s;  /* Animation plus rapide */
+    box-sizing: border-box;
+    line-height: 1;         /* Meilleur contrôle de la hauteur */
+}
+
+.btn-inscription {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #0056b3; /* Ajout d'une bordure subtile */
+}
+
+.btn-connexion {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #dee2e6;
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .btn-small {
+        padding: 3px 6px;    /* Encore plus compact */
+        font-size: 11px;     /* Taille minimale lisible */
+        min-width: 70px;     /* Largeur réduite */
+        margin: 0 1px;       /* Espacement minimal */
+    }
+    
+    .boutons-header {
+        margin-top: 8px;
+    }
+}
+
+
+/* ---------------------------------------- */
+/* Pied de page */
+footer {
+    background-color: #34495e; /* Gris-bleu foncé */
+    color: #ecf0f1; /* Texte blanc cassé */
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #2c3e50; /* Couleur plus foncée au survol */
+}
+
+footer a {
+    color: #1abc9c; /* Vert clair */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #e74c3c; /* Rouge au survol */
+    text-decoration: underline;
+}
+
+/* ---------------------------------------- */
+/* Sections spécifiques */
+section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px); /* Léger décalage vers le haut au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Titres */
+h1, h2, h3 {
+    color: #2c3e50; /* Gris bleu foncé */
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease;
+}
+
+/* Paragraphe */
+p {
+    font-size: 1rem;
+    color: #555; /* Gris moyen */
+    margin-bottom: 20px;
+    line-height: 1.8;
+    animation: fadeIn 1.2s ease;
+}
+
+/* ---------------------------------------- */
+/* Formulaires */
+form {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    animation: fadeIn 1.2s ease;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Gris foncé */
+}
+
+input, textarea, button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #3498db; /* Bordure bleue au focus */
+    outline: none;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Bleu plus foncé au survol */
+    transform: scale(1.05); /* Zoom léger */
+}
+
+/* ---------------------------------------- */
+/* Grilles pour galeries */
+.gallery-grid, .destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img, .destinations-grid img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1); /* Zoom au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------------------------------- */
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------------------------------------- */
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        padding: 20px;
+    }
+
+    .gallery-grid, .destinations-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid, .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/*--------------------------------------------------*/
+/* Images des services */
+.service-card img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    margin-bottom: 20px;
+}
+
+/* Effet de zoom sur l'image au survol */
+.service-card:hover img {
+    transform: scale(1.1);  /* Zoom de l'image */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Ombre portée pour l'effet */
+    opacity: 0.9;  /* Légère transparence pour l'effet */
+}
+
+/* Effet d'ombrage sur l'image lors du survol */
+.service-card img:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Ombre accentuée lors du survol */
+}
+
+/* Rendre les images responsives */
+.service-card img {
+    max-width: 30%;
+    height: auto;
+}
+
+/* Pour des petites résolutions, on peut réduire la taille de l'image */
+@media (max-width: 768px) {
+    .service-card img {
+        width: 80%;
+        margin: 0 auto;
+    }
+} 
+/*--------------------------*/
+/* Style général du tableau */
+.destinations_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: #ffffff; /* Fond blanc */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre dynamique */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Animation sur survol du tableau */
+}
+
+/* En-têtes du tableau */
+.destinations_table th {
+    background-color: #ff7f50; /* Orange vif pour l'en-tête */
+    color: white;
+    padding: 18px;
+    text-align: center;
+    font-size: 1.1rem;
+    border-top-left-radius: 10px; /* Coins arrondis en haut à gauche */
+    border-top-right-radius: 10px; /* Coins arrondis en haut à droite */
+    text-transform: uppercase;
+}
+
+/* Cellules du tableau */
+.destinations_table td {
+    padding: 16px;
+    text-align: center;
+    font-size: 1rem;
+    color: #34495e; /* Gris foncé pour le texte */
+    border: 1px solid #ddd; /* Bordure légère */
+    transition: background-color 0.3s ease; /* Animation de fond au survol */
+}
+
+/* Lignes alternées pour un meilleur contraste */
+.destinations_table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fond gris clair pour les lignes paires */
+}
+
+.destinations_table tr:nth-child(odd) {
+    background-color: #ffffff; /* Fond blanc pour les lignes impaires */
+}
+
+/* Effet de survol pour les lignes */
+.destinations_table tr:hover {
+    background-color: #f1c40f; /* Fond jaune doré pour les lignes survolées */
+    color: #2c3e50; /* Texte foncé */
+    cursor: pointer; /* Curseur pointeur pour montrer que la ligne est cliquable */
+}
+
+/* Effet de survol sur l'ensemble du tableau */
+.destinations_table:hover {
+    transform: scale(1.05); /* Agrandissement du tableau au survol */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+/* Bordures et coins du tableau */
+.destinations_table th, .destinations_table td {
+    border: 1px solid #ddd; /* Bordure subtile entre les cellules */
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+    .destinations_table th, .destinations_table td {
+        font-size: 0.9rem; /* Réduction de la taille des polices pour les petits écrans */
+        padding: 12px;
+    }
+} 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.img-fade {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.3s;
+}
+.img-zoom {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.img-zoom:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* ==================== */
+/* DASHBOARD STYLES */
+/* ==================== */
+
+.dashboard-container {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.admin-greeting {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+/* Cards Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.dashboard-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.dashboard-card .card-body {
+    padding: 1.5rem;
+}
+
+.dashboard-card h5 {
+    color: #3498db;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.dashboard-card p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Reservations List */
+.reservations-list {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.reservation-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    border-bottom: 1px solid #f1f1f1;
+    transition: background 0.2s ease;
+}
+
+.reservation-item:hover {
+    background: #f9f9f9;
+}
+
+.reservation-info {
+    flex: 1;
+}
+
+.client-name {
+    display: block;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.3rem;
+}
+
+.destination {
+    display: block;
+    color: #3498db;
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.reservation-date {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.confirmed {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-badge.pending {
+    background: #fff8e1;
+    color: #ff8f00;
+}
+
+/* Section Titles */
+.section-title {
+    color: #2c3e50;
+    margin: 2rem 0 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: #3498db;
+    border-radius: 3px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .reservation-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    .status-badge {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard-container {
+        padding: 1rem;
+    }
+}
